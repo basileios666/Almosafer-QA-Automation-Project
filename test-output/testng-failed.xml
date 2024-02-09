@@ -6,7 +6,6 @@
       <class name="AlmosaferWeb.MyTestCases">
         <methods>
           <include name="makeSurePageIsFullyLoaded"/>
-          <include name="randomlySelectThevistorNumber"/>
           <include name="switchToHotelTab"/>
           <include name="myPostTest"/>
           <include name="mySetup"/>

@@ -37,7 +37,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void CheckTheDeafultLanguageIsEnglish() {
 		String ExpectedLanaguage = "EN";
 		String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang").toUpperCase();
@@ -45,7 +45,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void CheckTheDefaultCurrencyIsSAR() throws InterruptedException {
 		String ExpectedCurrency = "SAR";
 		String ActualCurrency = driver.findElement(By.xpath("//button[@data-testid='Header__CurrencySelector']"))
@@ -53,7 +53,7 @@ public class MyTestCases extends Paramaeters {
 		assertEquals(ActualCurrency, ExpectedCurrency);
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void CheckContactNumber() throws InterruptedException {
 		String ExpectedContactNumber = "+966554400000";
 		String ActualContactNumber = driver.findElement(By.tagName("strong")).getText();
@@ -61,7 +61,7 @@ public class MyTestCases extends Paramaeters {
 		assertEquals(ActualContactNumber, ExpectedContactNumber);
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void CheckQitafLogo() {
 		WebElement theFooter = driver.findElement(By.tagName("footer"));
 
@@ -70,7 +70,7 @@ public class MyTestCases extends Paramaeters {
 		assertEquals(theFooter.findElement(By.cssSelector(".sc-bdVaJa.bxRSiR.sc-ekulBa.eYboXF")).isDisplayed(), true);
 	}
 
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5, enabled = true)
 	public void CheckHotelTabIsNotSelectedByDefault() {
 
 		;
@@ -79,7 +79,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6, enabled = true)
 	public void CheckDepatureDateAndReturnDate() {
 
 		LocalDate today = LocalDate.now();
@@ -100,7 +100,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7, enabled = true)
 	public void RandomMethodToChangeTheLanguage() {
 		Random rand = new Random();
 
@@ -125,7 +125,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8, enabled = true)
 	public void switchToHotelTab() {
 
 		WebElement HotelTab = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
@@ -154,7 +154,7 @@ public class MyTestCases extends Paramaeters {
 		org.testng.Assert.assertEquals(false, true);
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9, enabled = true)
 	public void randomlySelectThevistorNumber() {
 		WebElement Vistors = driver.findElement(By.tagName("select"));
 		Select selector = new Select(Vistors);
@@ -171,7 +171,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 10, enabled = true)
 
 	public void makeSurePageIsFullyLoaded() throws InterruptedException {
 		Thread.sleep(25800);
@@ -192,7 +192,7 @@ public class MyTestCases extends Paramaeters {
 
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 11, enabled = true)
 
 	public void sortTheItemsBasedOnThePrice() throws InterruptedException {
 		Thread.sleep(5000);
@@ -219,6 +219,8 @@ public class MyTestCases extends Paramaeters {
 		assertEquals(HighestPriceOntheListAsNumber > LowestPriceOnTheListAsNumber, true);
 
 	}
+
+	
 
 	@AfterTest
 	public void myPostTest() {
